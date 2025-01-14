@@ -4,7 +4,11 @@
 
 [Overview](#overview)
 
-[Data Analysis](#data-analysis)
+[Instructions](#instructions)
+
+[Data](#data)
+
+[Analysis](#analysis)
 
 [Presentation](#presentation)
 
@@ -16,7 +20,7 @@
 
 This project aims to predict the popularity of Spotify music tracks based on a song's features recorded on the Spotify API. These features include danceability, energy, key, loudness, speechiness, acousticness, instrumentalness,liveness, valence, tempo and duration. These featyrtuers  Specifically, we looked at how the differnet features impact a song's popularity as measured by Spotify.
 
-### Questions we aim to answer
+#### Questions we aim to answer
 
 1. Is there a correlation between a song's features and it's popuilarity?
 2. What feature has the highest importance in a song's popularity?
@@ -49,44 +53,44 @@ This project aims to predict the popularity of Spotify music tracks based on a s
 
 1. Read the following CSV files from [./Resouces](./Resources/):
 
-    spotify_songs
+        spotify_songs
 
 2. Data cleaning
 
-   Drop rows with duplicate track_id and track-name.
+        Drop rows with duplicate track_id and track-name.
 
-   Drop rows with missing or zero track_popularity.
+        Drop rows with missing or zero track_popularity.
    
-   Drop columns that will no be used in analyzing the data:
-        track_id
-        track_album_release_date
-        playlist_genre
-        track_name
-        track_artist
-        track_album_id
-        playlist_subgenre
-        track_album_name
-        playlist_name
-        playlist_id
-        mode
+        Drop columns that will no be used in analyzing the data:
+            track_id
+            track_album_release_date
+            playlist_genre
+            track_name
+            track_artist
+            track_album_id
+            playlist_subgenre
+            track_album_name
+            playlist_name
+            playlist_id
+            mode
 
-    Divide track-popularity into 4 tiers:
-        0 ~ 31  : Not Popular
-        31 ~ 48 : Neutral
-        48 ~ 63 : Popular
-        63 ~ 100: Very Popular
+        Divide track-popularity into 4 tiers:
+            0 ~ 31  : Not Popular
+            31 ~ 48 : Neutral
+            48 ~ 63 : Popular
+            63 ~ 100: Very Popular
 
-    Split data into train and test
+        Split data into train and test
 
-    Encode and scale 'key' columkn
+        Encode and scale 'key' column
 
 3.  Modeling
 
-    Apply and evaluate accuracy of various prediction models
-        K Neighbors Classifier
-        Random Forest Classifier
-        Support Vector Machine (SVM)
-        Logistic Regression
+        Apply and evaluate accuracy of various prediction models
+            K Neighbors Classifier
+            Random Forest Classifier
+            Support Vector Machine (SVM)
+            Logistic Regression
 
 4.  Predict popularity of a new track by providing values for:
         danceability
@@ -152,6 +156,8 @@ Data Dictionary
 
 [ttsai19](https://github.com/ttsai19)
 
-[CJ](https://github.com/CJ)
+[cfleming22](https://github.com/cfleming22)
 
 [GIBueno25](https://github.com/GIBueno25)
+
+
