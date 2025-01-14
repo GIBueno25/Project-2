@@ -27,7 +27,7 @@ This project aims to predict the popularity of Spotify music tracks based on a s
 3. Predict a song's popularity based on a set of features.
 
 
-### Usage and installation instructions
+### Instructions
 
 #### Execution
 
