@@ -33,16 +33,16 @@ This project aims to predict the popularity of Spotify music tracks based on a s
 
 1. Ensure that the dependencies are installed to successfully import the below:
     
-    import pandas as pd <br/>
-    import numpy as np <br/>
-    from sklearn.preprocessing import StandardScaler, LabelEncoder<br/>
-    from sklearn.model_selection import train_test_split, GridSearchCV <br/>
-    from sklearn.preprocessing import StandardScaler <br/>
-    from sklearn.ensemble import RandomForestRegressor <br/>
-    from sklearn.metrics import accuracy_score <br/>
-    from sklearn.ensemble import RandomForestRegressor <br/>
-    import matplotlib.pyplot as plt<br/>
-    import seaborn as sns<br/>
+        import pandas as pd <br/>
+        import numpy as np <br/>
+        from sklearn.preprocessing import StandardScaler, LabelEncoder<br/>
+        from sklearn.model_selection import train_test_split, GridSearchCV <br/>
+        from sklearn.preprocessing import StandardScaler <br/>
+        from sklearn.ensemble import RandomForestRegressor <br/>
+        from sklearn.metrics import accuracy_score <br/>
+        from sklearn.ensemble import RandomForestRegressor <br/>
+        import matplotlib.pyplot as plt<br/>
+        import seaborn as sns<br/>
     
 
 1. Open and run [data_clean.ipynb](data_clean.ipynb) in a Jupyter Notebook or Jupyter Lab.
