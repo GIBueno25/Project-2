@@ -158,10 +158,10 @@ Features Correlation <br/>
 ![Features](Images/feature_correlation_heatmap.png)
 
 Features Importance - Initial Model <br/>
-![Importance](Images/old_model_feature_importance.png) ![Importance](Images/feature_importances.png)
+![Importance](Images/old_model_feature_importance.png) 
 
 Features Importance - Updated Model <br/>
-
+![Importance](Images/feature_importances.png)
 
 Improvement <br/>
 ![Improvement](Images/improvement_graph.png)
