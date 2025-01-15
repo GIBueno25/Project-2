@@ -18,11 +18,11 @@
 
 ### Overview
 
-This project aims to predict the popularity of Spotify music tracks based on a song's features recorded on the Spotify API. These features include danceability, energy, key, loudness, speechiness, acousticness, instrumentalness,liveness, valence, tempo and duration. These featyrtuers  Specifically, we looked at how the differnet features impact a song's popularity as measured by Spotify.
+This project aims to predict the popularity of Spotify music tracks based on a song's features recorded on the Spotify API. These features include danceability, energy, key, loudness, speechiness, acousticness, instrumentalness, liveness, valence, tempo and duration. Specifically, we looked at how the differnet features impact a song's popularity as measured by Spotify.
 
 #### Questions we aim to answer
 
-1. Is there a correlation between a song's features and it's popuilarity?
+1. Is there a correlation between a song's features and it's popularity?
 2. What feature has the highest importance in a song's popularity?
 3. Predict a song's popularity based on a set of features.
 
@@ -33,16 +33,16 @@ This project aims to predict the popularity of Spotify music tracks based on a s
 
 1. Ensure that the dependencies are installed to successfully import the below:
     
-        import pandas as pd <br/>
-        import numpy as np <br/>
-        from sklearn.preprocessing import StandardScaler, LabelEncoder<br/>
-        from sklearn.model_selection import train_test_split, GridSearchCV <br/>
-        from sklearn.preprocessing import StandardScaler <br/>
-        from sklearn.ensemble import RandomForestRegressor <br/>
-        from sklearn.metrics import accuracy_score <br/>
-        from sklearn.ensemble import RandomForestRegressor <br/>
-        import matplotlib.pyplot as plt<br/>
-        import seaborn as sns<br/>
+    import pandas as pd <br/>
+    import numpy as np <br/>
+    from sklearn.preprocessing import StandardScaler, LabelEncoder<br/>
+    from sklearn.model_selection import train_test_split, GridSearchCV <br/>
+    from sklearn.preprocessing import StandardScaler <br/>
+    from sklearn.ensemble import RandomForestRegressor <br/>
+    from sklearn.metrics import accuracy_score <br/>
+    from sklearn.ensemble import RandomForestRegressor <br/>
+    import matplotlib.pyplot as plt<br/>
+    import seaborn as sns<br/>
     
 
 1. Open and run [data_clean.ipynb](data_clean.ipynb) in a Jupyter Notebook or Jupyter Lab.
@@ -51,7 +51,7 @@ This project aims to predict the popularity of Spotify music tracks based on a s
 
 [data_clean.ipynb](data_clean.ipynb) is the main notebook for training and testing data, and predicting results.
 
-1. Read the following CSV files from [./Resouces](./Resources/):
+1. Read the following CSV files from [./Resources](./Resources/):
 
         spotify_songs
 
@@ -92,23 +92,23 @@ This project aims to predict the popularity of Spotify music tracks based on a s
             Support Vector Machine (SVM)
             Logistic Regression
 
-4.  Predict popularity of a new track by providing values for:
-        danceability
-        energy
-        key
-        loudness
-        speechiness
-        acousticness
-        instrumentalness
-        liveness
-        valence
-        tempo
-        duration_ms
+4.  Predict popularity of a new track by providing values for: <br/>
+            danceability <br/>
+            energy <br/>
+            key <br/>
+            loudness <br/>
+            speechiness <br/>
+            acousticness <br/>
+            instrumentalness <br/>
+            liveness <br/>
+            valence <br/>
+            tempo <br/>
+            duration_ms <br/>
 
 
 ### Data
-Data Source
-Spotify Songs - [Kaggle](https://www.kaggle.com/datasets/joebeachcapital/30000-spotify-songs/)
+Data Source: <br/>
+    Spotify Songs - [Kaggle](https://www.kaggle.com/datasets/joebeachcapital/30000-spotify-songs/)
 
 Data Dictionary
 |variable                 |class     |description |
@@ -116,7 +116,7 @@ Data Dictionary
 |track_id                 |character | Song unique ID|
 |track_name               |character | Song Name|
 |track_artist             |character | Song Artist|
-|track_popularity         |double    | Song Popularity (0-100) where higher is better |
+|track_popularity         |double    | Song Popularity (0-100) where higher is better. The popularity is calculated by algorithm and is based mainly on the total number of plays the track has had and how recent those plays are. |
 |track_album_id           |character | Album unique ID|
 |track_album_name         |character | Song album name |
 |track_album_release_date |character | Date when album released |
@@ -140,13 +140,40 @@ Data Dictionary
 
 ### Analysis
 
-1. **Is there a correlation between a song's features and it's popuilarity?**
+1. **Is there a correlation between a song's features and it's popularity?**
 
 2. **What feature has the highest importance in a song's popularity?**
 
-3. **Predict a song's popularity based on a set of features.What were the trends in the S&P 500, Yield Curve, CCI, Gold prices  Fedrates, inflation, and Unemployment as far as 1950s (varies by dataset) to the present?**
+3. **Predict a song's popularity based on a set of features.**
 
-  
+<div align="center">
+
+Popularity <br/>
+![Popularity](Images/distribution_popularity_tiers.png)
+
+Confusion Matrix <br/>
+![Confusion](Images/confusion_matrix.png)
+
+Features Correlation <br/>
+![Features](Images/feature_correlation_heatmap.png)
+
+Features Importance - Initial Model <br/>
+![Importance](Images/old_model_feature_importance.png)
+
+Features Importance - Updated Model <br/>
+![Importance](Images/feature_importances.png)
+
+Improvement <br/>
+![Improvement](Images/improvement_graph.png)
+
+Trends in Popularity <br/>
+![Trends](Images/trends_in_popularity.png)
+
+Actual vs Predicted <br/>
+![Actual-Predicted](Images/actual_vs_predicted.png)
+
+
+<div align="left">
 ## Presentation
 
 
