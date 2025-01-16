@@ -53,11 +53,11 @@ This project aims to predict the popularity of Spotify music tracks based on a s
 
 [combined_analysis.ipynb](combined_analysis.ipynb) is the main notebook for training and testing data, and predicting results.
 
- 1. Read the following CSV files from [./Resources](./Resources/):
+1. Read the following CSV files from [./Resources](./Resources/):
 
        spotify_songs
 
- 2.a Data cleaning - First attempt
+2.a Data cleaning - First attempt
 
         Drop rows with duplicate track_id and track-name.
 
@@ -86,7 +86,7 @@ This project aims to predict the popularity of Spotify music tracks based on a s
 
         Encode and scale 'key' column
 
- 2.b Data cleaning - Second attempt
+2.b Data cleaning - Second attempt
         
         Drop rows with duplicate track_id and track-name.
 
@@ -113,21 +113,21 @@ This project aims to predict the popularity of Spotify music tracks based on a s
 
         Split data into train and test
           
- 3.a Modeling - First attempt
+3.a Modeling - First attempt
 
         Apply and evaluate accuracy of various prediction models
             K Neighbors Classifier
             Logstic Regression
             Random Forest Classifier
 
- 3.b Modeling - Second attempt
+3.b Modeling - Second attempt
 
         Apply and evaluate accuracy of various prediction models
             Gradient Boosting Classifier
             Logstic Regression
             Random Forest Classifier with Grid
             
- 4.  Predict popularity of a new track by providing values for: <br/>
+4.  Predict popularity of a new track by providing values for: <br/>
             danceability <br/>
             energy <br/>
             key <br/>
