@@ -232,35 +232,30 @@ Majority of the music tracks in the data set was released after 2010.
 ### Conclusion
 
 1. **Is there a correlation between a song's features and it's popularity?**
-Based on the results of the correlation matrix, there does not appear to be any correlation betweena song's popularity and its individual features.
+
+Based on the results of the correlation matrix, there does not appear to be any correlation between a song's popularity and its individual features.
 
 <div align="center">
     
 |Feature                  |Correlation      |
 |:---|:-----------|
-|danceability |0.64748
-| energy |Gradient Boosting Classifier:       0.5174
-|key |Random Forest Classifier with Grid: 0.6454
+|danceability | 0.64748
+|energy | -0.109112
+|key |-0.000650
+|loudness | 0.057687
+|speechiness | 0.006819
+|instrumentalness | -0.149872
+|liveness | -0.05458
+|valence |  0.033231
+|tempo | -0.005378
+|duration_ms | -0.143682
 
- <br/>
-            <br/>
-             <br/>
-            loudness <br/>
-            speechiness <br/>
-            acousticness <br/>
-            instrumentalness <br/>
-            liveness <br/>
-            valence <br/>
-            tempo <br/>
-            duration_ms <br/>
-
- 
-3. **What feature has the highest importance in a song's popularity?**
-
-4. **How accurately can a song's popularity be predicted based on its features?**
+<div align="left"> 
+    
+2. **What feature has the highest importance in a song's popularity?**
+9 of the 11 features analyzed contribute more than 0.08 in predicting a song's popuilarity. Loudness ranks the highest at just under 0.10, followed closely by duration_ms. These results are consistent with both attemmpts.
 
 <div align="center">
-
 
 Features Correlation <br/>
 ![Features](Images/feature_correlation_heatmap.png)
@@ -272,7 +267,13 @@ Features Importance - Updated Model <br/>
 ![Importance](Images/feature_importances.png)
 
 
+<div align="left"> 
+    
+3. **How accurately can a song's popularity be predicted based on its features?**
 
+Using Random Forest Classifier with Grid, a song's popularity can predicted wuth an accuracy score of 0.6454. 
+
+In conclusion, this analysis reveals that a song's features should not be relioed upon to predict a song's popularity. We suspecty that predciting song's popuilrity is a complex undertaking because popularity is influenced by a mix of musical attributes, artists' marketing campaign, social factors, and cultural events. 
 
 <div align="left">
 ## Presentation
