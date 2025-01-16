@@ -182,8 +182,8 @@ These modifications resulted in signiifacntly improved accuracy scores.
 
 |First Attempt                  |Second Attempt      
 |:---|:-----------|
-|K Neighbors Classifier:    0.3497 |Gradient Boosting Classifier:       0.5174
 |Logstic Regression:        0.3283 |Logstic Regression:                 0.5008
+|K Neighbors Classifier:    0.3497 |Gradient Boosting Classifier:       0.5174
 |Random Forest Classifier:  0.4537 |Random Forest Classifier with Grid: 0.6454
 
 
