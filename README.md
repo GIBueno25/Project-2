@@ -24,7 +24,7 @@ This project aims to predict the popularity of Spotify music tracks based on a s
 
 1. Is there a correlation between a song's features and it's popularity?
 2. What feature has the highest importance in a song's popularity?
-3. Predict a song's popularity based on a set of features.
+3. How accurately can a song's popularity be predicted based on its features?
 
 
 ### Instructions
@@ -200,20 +200,32 @@ Majority of the music tracks popularity tiers follow a normal bell curve.
 
 ![Popularity](Images/distribution_popularity_tiers.png)
 
-
 <div align="left">
 
 Actual vs Predicted <br/>
+
+<div align="center">
+    
 ![Actual-Predicted](Images/actual_vs_predicted.png)
 
+<div align="left">
 
 Confusion Matrix <br/>
+
+<div align="center">
+    
 ![Confusion](Images/confusion_matrix.png)
 
+<div align="left">
+
 Trends in Popularity <br/>
-Majority of the music tracks in the dtat set was released after 2010.
+Majority of the music tracks in the data set was released after 2010.
+
+<div align="center">
+    
 ![Trends](Images/trends_in_popularity.png)
 
+<div align="left">
 
 1. **Is there a correlation between a song's features and it's popularity?**
 
