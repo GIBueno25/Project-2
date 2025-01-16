@@ -58,7 +58,7 @@ This project aims to predict the popularity of Spotify music tracks based on a s
        spotify_songs
 
 2. Step 1: Data Cleaning
-   First Attempt
+   First Attempt <br/>
    
         Drop rows with duplicate track_id and track-name.
 
