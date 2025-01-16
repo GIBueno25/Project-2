@@ -220,7 +220,7 @@ Majority of the music tracks in the data set was released after 2010.
 
 1. **Is there a correlation between a song's features and its popularity?**
 
-Based on the results of the correlation matrix, there does not appear to be any correlation between a song's popularity and its individual features.
+Based on the results of the correlation matrix, there is no strong correlation between audio features and a song's popularity.
 
 <div align="center">
     
@@ -258,9 +258,9 @@ Features Importance - Updated Model <br/>
     
 3. **How accurately can a song's popularity be predicted based on its features?**
 
-Using Random Forest Classifier with Grid, a song's popularity can be predicted with an accuracy score of 0.6454. 
+The best-performing model (Random Forest Classifier with GridSearch) achieved an accuracy of 64.54%, showing moderate prediction capability. 
 
-In conclusion, this analysis reveals that a song's features should not be relied upon to predict a song's popularity. We suspect that predicting song's popularity is a complex undertaking because popularity is influenced by a mix of musical attributes, artists' marketing campaign, social factors, and cultural events. 
+This analysis reveals that a song's features should not be relied upon to predict a song's popularity. We suspect that predicting song's popularity is a complex undertaking because popularity is influenced by a mix of musical attributes, artists' marketing campaign, social factors, and cultural events. 
 
 <div align="left">
 ## Presentation
