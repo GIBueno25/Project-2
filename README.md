@@ -20,20 +20,20 @@
 
 ### Overview
 
-This project aims to predict the popularity of Spotify music tracks based on a song's features recorded on the Spotify API. These features include danceability, energy, key, loudness, speechiness, acousticness, instrumentalness, liveness, valence, tempo and duration. Specifically, we looked at how the differnet features impact a song's popularity as measured by Spotify.
+This project aims to predict the popularity of Spotify music tracks based on a song's features recorded on the Spotify API. These features include danceability, energy, key, loudness, speechiness, acousticness, instrumentalness, liveness, valence, tempo and duration. Specifically, we looked at how the different features impact a song's popularity as measured by Spotify.
 
 #### Questions we aim to answer
 
-1. Is there a correlation between a song's features and it's popularity?
+1. Is there a correlation between a song's features and its popularity?
 2. What feature has the highest importance in a song's popularity?
 3. How accurately can a song's popularity be predicted based on its features?
 
 
 ### Instructions
 
-#### Execution
+#### Setup
 
-1. Ensure that the dependencies are installed to successfully import the below:
+1. Install Dependencies: Ensure that the following libraries are installed:
     
     import pandas as pd <br/>
     import matplotlib.pyplot as plt <br/>
@@ -47,9 +47,9 @@ This project aims to predict the popularity of Spotify music tracks based on a s
     from sklearn.linear_model import LogisticRegression <br/>
     
 
-2. Open and run [combined_analysis.ipynb](combined_analysis.ipynb) in a Jupyter Notebook or Jupyter Lab.
+2. Run the Analysis: Open and executethe notebook [combined_analysis.ipynb](combined_analysis.ipynb) in a Jupyter Notebook or Jupyter Lab.
 
-#### High-level logic contained in combined_analysis.ipynb:
+#### Logic Overview
 
 [combined_analysis.ipynb](combined_analysis.ipynb) is the main notebook for training and testing data, and predicting results.
 
@@ -57,8 +57,9 @@ This project aims to predict the popularity of Spotify music tracks based on a s
 
        spotify_songs
 
-2.a Data cleaning - First attempt
-
+2. Step 1: Data Cleaning
+   First Attempt
+   
         Drop rows with duplicate track_id and track-name.
 
         Drop rows with missing or zero track_popularity.
@@ -86,7 +87,7 @@ This project aims to predict the popularity of Spotify music tracks based on a s
 
         Encode and scale 'key' column
 
-2.b Data cleaning - Second attempt
+   Second Attempt
         
         Drop rows with duplicate track_id and track-name.
 
@@ -109,27 +110,27 @@ This project aims to predict the popularity of Spotify music tracks based on a s
         Divide track-popularity into 3 tiers:
             0 ~ 31  : Low
             32 ~ 63 : Medium
-            64 ~ 100: Highr
+            64 ~ 100: High
 
         Split data into train and test
           
-3.a Modeling - First attempt
+3. Modeling
+   First attempt
 
         Apply and evaluate accuracy of various prediction models
             K Neighbors Classifier
-            Logstic Regression
+            Logistic Regression
             Random Forest Classifier
 
-3.b Modeling - Second attempt
+    Second attempt
 
         Apply and evaluate accuracy of various prediction models
             Gradient Boosting Classifier
-            Logstic Regression
+            Logistic Regression
             Random Forest Classifier with Grid
             
 ### Data
-Data Source: <br/>
-    Spotify Songs - [Kaggle](https://www.kaggle.com/datasets/joebeachcapital/30000-spotify-songs/)
+The dataset is sourced from [Kaggle's Spotify Songs Dataset](https://www.kaggle.com/datasets/joebeachcapital/30000-spotify-songs/)
 
 Data Dictionary
 |variable                 |class     |description |
@@ -160,13 +161,13 @@ Data Dictionary
 
 
 ### Analysis
-Based on the distribution of songs' popularity, data was initally grouped ionto 4 tiers. Applying 3 different prediction models yielded accruacy scores of under 0.50. In an attempt to improve the accuracy scores, the data cleaning process was modified as follows:
+Based on the distribution of songs' popularity, data was initially grouped into 4 tiers. Applying 3 different prediction models yielded accuracy scores of under 0.50. In an attempt to improve the accuracy scores, the data cleaning process was modified as follows:
 
         - Data was grouped into 3 tiers
-        - Numerical columns were normalzied uising Standard Scaler
-        - Apply oter prediction models
+        - Numerical columns were normalized using Standard Scaler
+        - Apply other prediction models
         
-These modifications resulted in signiificantly improved accuracy scores.
+These modifications resulted in significantly improved accuracy scores.
 
 <div align="center">
     
@@ -217,7 +218,7 @@ Majority of the music tracks in the data set was released after 2010.
     
 ### Conclusion
 
-1. **Is there a correlation between a song's features and it's popularity?**
+1. **Is there a correlation between a song's features and its popularity?**
 
 Based on the results of the correlation matrix, there does not appear to be any correlation between a song's popularity and its individual features.
 
@@ -239,7 +240,7 @@ Based on the results of the correlation matrix, there does not appear to be any 
 <div align="left"> 
     
 2. **What feature has the highest importance in a song's popularity?**
-9 of the 11 features analyzed contribute more than 0.08 in predicting a song's popuilarity. Loudness ranks the highest at just under 0.10, followed closely by duration_ms. These results are consistent with both attemmpts.
+9 of the 11 features analyzed contribute more than 0.08 in predicting a song's popularity. Loudness ranks the highest at just under 0.10, followed closely by duration_ms. These results are consistent with both attempts.
 
 <div align="center">
 
@@ -257,9 +258,9 @@ Features Importance - Updated Model <br/>
     
 3. **How accurately can a song's popularity be predicted based on its features?**
 
-Using Random Forest Classifier with Grid, a song's popularity can predicted wuth an accuracy score of 0.6454. 
+Using Random Forest Classifier with Grid, a song's popularity can be predicted with an accuracy score of 0.6454. 
 
-In conclusion, this analysis reveals that a song's features should not be relioed upon to predict a song's popularity. We suspecty that predciting song's popuilrity is a complex undertaking because popularity is influenced by a mix of musical attributes, artists' marketing campaign, social factors, and cultural events. 
+In conclusion, this analysis reveals that a song's features should not be relied upon to predict a song's popularity. We suspect that predicting song's popularity is a complex undertaking because popularity is influenced by a mix of musical attributes, artists' marketing campaign, social factors, and cultural events. 
 
 <div align="left">
 ## Presentation
