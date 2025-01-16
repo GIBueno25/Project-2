@@ -114,7 +114,7 @@ This project aims to predict the popularity of Spotify music tracks based on a s
 
         Split data into train and test
           
-3. Modeling
+3. Modeling <br/>
    First attempt
 
         Apply and evaluate accuracy of various prediction models
