@@ -53,9 +53,9 @@ This project aims to predict the popularity of Spotify music tracks based on a s
 
 [combined_analysis.ipynb](combined_analysis.ipynb) is the main notebook for training and testing data, and predicting results.
 
-1. Read the following CSV files from [./Resources](./Resources/):
+ 1. Read the following CSV files from [./Resources](./Resources/):
 
-        spotify_songs
+       spotify_songs
 
  2.a Data cleaning - First attempt
 
