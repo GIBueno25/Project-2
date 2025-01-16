@@ -34,34 +34,34 @@ This project aims to predict the popularity of Spotify music tracks based on a s
 1. Ensure that the dependencies are installed to successfully import the below:
     
     import pandas as pd <br/>
+    import matplotlib.pyplot as plt <br/>
+    import seaborn as sns <br/>
     import numpy as np <br/>
-    from sklearn.preprocessing import StandardScaler, LabelEncoder<br/>
+    from sklearn.preprocessing import StandardScaler, LabelEncoder <br/>
     from sklearn.model_selection import train_test_split, GridSearchCV <br/>
-    from sklearn.preprocessing import StandardScaler <br/>
-    from sklearn.ensemble import RandomForestRegressor <br/>
-    from sklearn.metrics import accuracy_score <br/>
-    from sklearn.ensemble import RandomForestRegressor <br/>
-    import matplotlib.pyplot as plt<br/>
-    import seaborn as sns<br/>
+    from sklearn.metrics import accuracy_score, classification_report, confusion_matrix <br/>
+    from sklearn.neighbors import KNeighborsClassifier <br/>
+    from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier <br/>
+    from sklearn.linear_model import LogisticRegression <br/>
     
 
-1. Open and run [data_clean.ipynb](data_clean.ipynb) in a Jupyter Notebook or Jupyter Lab.
+1. Open and run [combined_analysis.ipynb](combined_analysis.ipynb) in a Jupyter Notebook or Jupyter Lab.
 
-#### High-level logic contained in data_clean.ipynb:
+#### High-level logic contained in combined_analysis.ipynb:
 
-[data_clean.ipynb](data_clean.ipynb) is the main notebook for training and testing data, and predicting results.
+[combined_analysis.ipynb](combined_analysis.ipynb) is the main notebook for training and testing data, and predicting results.
 
 1. Read the following CSV files from [./Resources](./Resources/):
 
         spotify_songs
 
-2. Data cleaning
+2.a Data cleaning - First attempt
 
         Drop rows with duplicate track_id and track-name.
 
         Drop rows with missing or zero track_popularity.
    
-        Drop columns that will no be used in analyzing the data:
+        Drop columns that will not be used in analyzing the data:
             track_id
             track_album_release_date
             playlist_genre
@@ -73,25 +73,58 @@ This project aims to predict the popularity of Spotify music tracks based on a s
             playlist_name
             playlist_id
             mode
-
-        Divide track-popularity into 4 tiers:
+            
+        Divide track-popularity into 3 tiers:
             0 ~ 31  : Not Popular
-            31 ~ 48 : Neutral
-            48 ~ 63 : Popular
-            63 ~ 100: Very Popular
+            32 ~ 48 : Neutral
+            49 ~ 63 : Popular
+            64 ~ 100: Very Popular
 
         Split data into train and test
 
         Encode and scale 'key' column
 
-3.  Modeling
+2.b Data cleaning - Second attempt
+        
+        Drop rows with duplicate track_id and track-name.
+
+        Drop rows with missing or zero track_popularity.
+   
+        Drop columns that will not be used in analyzing the data:
+            track_id
+            track_album_release_date
+            playlist_genre
+            track_name
+            track_artist
+            track_album_id
+            playlist_subgenre
+            track_album_name
+            playlist_name
+            playlist_id
+         
+        Normalize numerical columns
+        
+        Divide track-popularity into 3 tiers:
+            0 ~ 31  : Low
+            32 ~ 63 : Medium
+            64 ~ 100: Highr
+
+        Split data into train and test
+          
+3.a Modeling - First attempt
 
         Apply and evaluate accuracy of various prediction models
             K Neighbors Classifier
+            Logstic Regression
             Random Forest Classifier
-            Support Vector Machine (SVM)
-            Logistic Regression
 
+3.b Modeling - Second attempt
+
+        Apply and evaluate accuracy of various prediction models
+            Gradient Boosting Classifier
+            Logstic Regression
+            Random Forest Classifier with Grid
+            
 4.  Predict popularity of a new track by providing values for: <br/>
             danceability <br/>
             energy <br/>
@@ -139,6 +172,20 @@ Data Dictionary
 
 
 ### Analysis
+Based on the distribution of songs' popularity, data was initally grouped ionto 4 tiers. Applying 3 different prediction models yielded accruacy scores of under 0.50. In an attempt to improve the accuracy scores, the data cleaning process was modified as follows:
+
+        - Data was grouped into 3 tiers
+        - Numerical columns were normalzied uising Standard Scaler
+        - Apply oter prediction models
+        
+These modifications resulted in signiifacntly improved accuracy scores.
+
+    |First Attempt                  |Second Attempt      
+    |:---|:-----------|
+    |K Neighbors Classifier:    0.3497 |Gradient Boosting Classifier:       0.5174
+    |Logstic Regression:        0.3283 |Logstic Regression:                 0.5008
+    |Random Forest Classifier:  0.4537 |Random Forest Classifier with Grid: 0.6454
+
 
 1. **Is there a correlation between a song's features and it's popularity?**
 
