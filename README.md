@@ -127,20 +127,6 @@ This project aims to predict the popularity of Spotify music tracks based on a s
             Logstic Regression
             Random Forest Classifier with Grid
             
-4.  Predict popularity of a new track by providing values for: <br/>
-            danceability <br/>
-            energy <br/>
-            key <br/>
-            loudness <br/>
-            speechiness <br/>
-            acousticness <br/>
-            instrumentalness <br/>
-            liveness <br/>
-            valence <br/>
-            tempo <br/>
-            duration_ms <br/>
-
-
 ### Data
 Data Source: <br/>
     Spotify Songs - [Kaggle](https://www.kaggle.com/datasets/joebeachcapital/30000-spotify-songs/)
