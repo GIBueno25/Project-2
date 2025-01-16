@@ -47,7 +47,7 @@ This project aims to predict the popularity of Spotify music tracks based on a s
     from sklearn.linear_model import LogisticRegression <br/>
     
 
-1. Open and run [combined_analysis.ipynb](combined_analysis.ipynb) in a Jupyter Notebook or Jupyter Lab.
+2. Open and run [combined_analysis.ipynb](combined_analysis.ipynb) in a Jupyter Notebook or Jupyter Lab.
 
 #### High-level logic contained in combined_analysis.ipynb:
 
