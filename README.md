@@ -179,13 +179,13 @@ Based on the distribution of songs' popularity, data was initally grouped ionto 
         - Apply oter prediction models
         
 These modifications resulted in signiifacntly improved accuracy scores.
-
+<div align="center">
 |First Attempt                  |Second Attempt      
 |:---|:-----------|
 |Logstic Regression:        0.3283 |Logstic Regression:                 0.5008
 |K Neighbors Classifier:    0.3497 |Gradient Boosting Classifier:       0.5174
 |Random Forest Classifier:  0.4537 |Random Forest Classifier with Grid: 0.6454
-
+<div align="left">
 
 1. **Is there a correlation between a song's features and it's popularity?**
 
