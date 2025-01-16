@@ -187,8 +187,9 @@ These modifications resulted in signiifacntly improved accuracy scores.
 |Random Forest Classifier:  0.4537 |Random Forest Classifier with Grid: 0.6454
 
 <div align="center">
-Improvement <br/>
+
 ![Improvement](Images/improvement_graph.png)
+
 <div align="left">
 
 1. **Is there a correlation between a song's features and it's popularity?**
