@@ -178,13 +178,13 @@ Based on the distribution of songs' popularity, data was initally grouped ionto 
         - Numerical columns were normalzied uising Standard Scaler
         - Apply oter prediction models
         
-These modifications resulted in signiifacntly improved accuracy scores.
+These modifications resulted in signiificantly improved accuracy scores.
 
 <div align="center">
     
 |First Attempt                  |Second Attempt      
 |:---|:-----------|
-|Logstic Regression:        0.3283 |Logstic Regression:                 0.5008
+|Logistic Regression:        0.3283 |Logstic Regression:                 0.5008
 |K Neighbors Classifier:    0.3497 |Gradient Boosting Classifier:       0.5174
 |Random Forest Classifier:  0.4537 |Random Forest Classifier with Grid: 0.6454
 
@@ -192,6 +192,28 @@ These modifications resulted in signiifacntly improved accuracy scores.
 ![Improvement](Images/improvement_graph.png)
 
 <div align="left">
+
+Popularity <br/>
+Majority of the music tracks popularity tiers follow a normal bell curve.
+
+<div align="center">
+
+![Popularity](Images/distribution_popularity_tiers.png)
+
+
+<div align="left">
+
+Actual vs Predicted <br/>
+![Actual-Predicted](Images/actual_vs_predicted.png)
+
+
+Confusion Matrix <br/>
+![Confusion](Images/confusion_matrix.png)
+
+Trends in Popularity <br/>
+Majority of the music tracks in the dtat set was released after 2010.
+![Trends](Images/trends_in_popularity.png)
+
 
 1. **Is there a correlation between a song's features and it's popularity?**
 
@@ -201,11 +223,7 @@ These modifications resulted in signiifacntly improved accuracy scores.
 
 <div align="center">
 
-Popularity <br/>
-![Popularity](Images/distribution_popularity_tiers.png)
 
-Confusion Matrix <br/>
-![Confusion](Images/confusion_matrix.png)
 
 Features Correlation <br/>
 ![Features](Images/feature_correlation_heatmap.png)
@@ -217,11 +235,6 @@ Features Importance - Updated Model <br/>
 ![Importance](Images/feature_importances.png)
 
 
-Trends in Popularity <br/>
-![Trends](Images/trends_in_popularity.png)
-
-Actual vs Predicted <br/>
-![Actual-Predicted](Images/actual_vs_predicted.png)
 
 
 <div align="left">
