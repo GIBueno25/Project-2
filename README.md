@@ -10,6 +10,8 @@
 
 [Analysis](#analysis)
 
+[Conclusion](#conclusion)
+
 [Presentation](#presentation)
 
 [The Team](#the-team)
@@ -182,11 +184,11 @@ These modifications resulted in signiificantly improved accuracy scores.
 
 <div align="center">
     
-|First Attempt                  |Second Attempt      
+|First Attempt                  |Second Attempt      |
 |:---|:-----------|
-|Logistic Regression:        0.3283 |Logstic Regression:                 0.5008
-|K Neighbors Classifier:    0.3497 |Gradient Boosting Classifier:       0.5174
-|Random Forest Classifier:  0.4537 |Random Forest Classifier with Grid: 0.6454
+|Logistic Regression: 0.3283 |Logstic Regression: 0.5008
+|K Neighbors Classifier: 0.3497 |Gradient Boosting Classifier: 0.5174
+|Random Forest Classifier: 0.4537 |Random Forest Classifier with Grid: 0.6454
 
 
 ![Improvement](Images/improvement_graph.png)
@@ -226,15 +228,38 @@ Majority of the music tracks in the data set was released after 2010.
 ![Trends](Images/trends_in_popularity.png)
 
 <div align="left">
+    
+### Conclusion
 
 1. **Is there a correlation between a song's features and it's popularity?**
-
-2. **What feature has the highest importance in a song's popularity?**
-
-3. **Predict a song's popularity based on a set of features.**
+Based on the results of the correlation matrix, there does not appear to be any correlation betweena song's popularity and its individual features.
 
 <div align="center">
+    
+|Feature                  |Correlation      |
+|:---|:-----------|
+|danceability |0.64748
+| energy |Gradient Boosting Classifier:       0.5174
+|key |Random Forest Classifier with Grid: 0.6454
 
+ <br/>
+            <br/>
+             <br/>
+            loudness <br/>
+            speechiness <br/>
+            acousticness <br/>
+            instrumentalness <br/>
+            liveness <br/>
+            valence <br/>
+            tempo <br/>
+            duration_ms <br/>
+
+ 
+3. **What feature has the highest importance in a song's popularity?**
+
+4. **How accurately can a song's popularity be predicted based on its features?**
+
+<div align="center">
 
 
 Features Correlation <br/>
